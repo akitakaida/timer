@@ -58,7 +58,7 @@ function getEndingTime(h, m){
     const d = new Date();
     // 時と分を取得し、入力されている時間を足す。24時間や60分を超えないように調整
     let preHr = parseInt(d.getHours()) + parseInt(h);
-　　let preMin = parseInt(d.getMinutes())+ parseInt(m);
+    let preMin = parseInt(d.getMinutes())+ parseInt(m);
     while(preMin >= 60){
         preMin -= 60;
 	preHr ++;

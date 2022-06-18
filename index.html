@@ -3,57 +3,13 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Webタイマー</title>
-	<link rel="stylesheet" href="css/timer.css">
-	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-	<script src="https://kit.fontawesome.com/03e4df556a.js" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/push.js/0.0.11/push.min.js"></script>
+	<title>index</title>
 </head>
-<body onload="showExistingTimer()">
-	<header>
-		<div class="container">
-			<h1 class="header-title">Webタイマー</h1>
-		</div>
-	</header>
-	<!--時間の入力エリア-->
-	<div class="input-wrapper">
-		<div class="container">
-			<div class="timer">
-				<h2>時間を入力</h2>
-				<input class="inputTime" type="number" name="hour" id="hour" value=00 step="1" min="0" max="99">
-				<label for="hour"></label>
-				<p class="colon">:</p>
-				<input class="inputTime" type="number" name="min" id="min" value=00 step="1" min="0" max="59">
-				<label for="min"></label>
-				<p class="colon">:</p>
-				<input class="inputTime" type="number" name="sec" id="sec" value=00 step="1" min="0" max="59">
-				<label for="sec"></label>
-				<br>
-				<input id="clear" type="button" value="CLEAR" class="btn">
-				<input id="ok" type="button" value="OK" class="btn">
-			</div>
-			<div id="existingTimer">
-				<h2>既存のタイマーを使用</h2>
-			</div>
-		</div>
-	</div>
-
-	<!--時間の表示エリア-->
-	<div id="modal-wrapper"></div>
-	<div class="container">
-		<div id="modal">
-			<div class="countArea">
-				<p id="clock-time">00:00:00</p>
-				<p id="endingTime"></p>
-				<input class="btn" id="start" type="button" value="START" disabled>
-				<input class="btn" id="stop" type="button" value="STOP" disabled>
-				<input class="btn" id="reset" type="button" value="RESET" disabled>
-				<p id="close"><i class="fa-solid fa-xmark"></i>close</p>
-			</div>
-		</div>
-	</div>
-
-	<!--Java scriptファイルの読み込み-->
-	<script language="javascript" src="js/timer.js"></script>
+<body onload="move()">
+<script>
+	function move(){
+		location.replace("app/timer.html")
+	}
+</script>
 </body>
 </html>
