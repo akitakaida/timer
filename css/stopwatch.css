@@ -1,0 +1,40 @@
+.watch-wrapper {
+    text-align: center;
+}
+
+.title {
+    border-bottom: solid 1px black;
+    text-align: left;
+    margin: 10px 0;
+    width: auto;
+}
+
+.timeArea{
+    text-align: center;
+    font-size: 50px;
+}
+
+.time{
+    padding:5px;
+    display: inline-block;
+}
+
+.ms{
+    font-size:25px;
+    padding:0;
+    display: inline-block;
+}
+
+#start{
+    width:150px;
+}
+#lap{
+    cursor:default;
+}
+#clear{
+    cursor:default;
+}
+#stop{
+    width:150px;
+    display:none;
+}

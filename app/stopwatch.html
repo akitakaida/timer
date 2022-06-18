@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webストップウォッチ</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/stopwatch.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/03e4df556a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!--サイドメニュー-->
+    <div id="side_menu">
+        <div class="side_menu_title">
+            <i class="fa-solid fa-bars side_menu_icon"></i>
+            <p class="side_menu_name">Menu</p>
+        </div>
+        <div class="side_menu_item" name="timer.html">
+            <i class="fa-solid fa-hourglass side_menu_icon"></i>
+            <p class="side_menu_name">タイマー</p>
+        </div>
+        <div class="side_menu_item" name="stopwatch.html" id="selected">
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+            <i class="fa-solid fa-stopwatch side_menu_icon"></i>
+            <p class="side_menu_name">ストップウォッチ</p>
+        </div>
+    </div>
+    <header>
+        <div class="container">
+            <h1 class="header-title">ストップウォッチ</h1>
+        </div>
+    </header>
+    
+    <!--時間の表示エリア-->
+    <div class="watch-wrapper">
+        <div class="container">
+            <h2 class="title">
+                TIME
+            </h2>
+            <div class="timeArea">
+                <p class="time" id="min">00</p>
+                <p class="time">:</p>
+                <p class="time" id="sec">00</p>
+                <p class="ms">.</p>
+                <p class="ms" id="ms">00</p>
+            </div>
+            <input id="lap" type="button" value="LAP" class="btn" disabled>
+            <input id="start" type="button" value="START" class="btn">
+            <input id="stop" type="button" value="STOP" class="btn">
+            <input id="clear" type="button" value="CLEAR" class="btn" disabled>
+        </div>
+    </div>
+
+    <!--ラップの表示-->
+    <div class="lap-wrapper">
+        <div class="container">
+            <h2 class="title">
+                LAP
+            </h2>
+            <ol id="lapArea">
+                
+            </ol>
+        </div>
+    </div>
+
+    <!--Java scriptファイルの読み込み-->
+    <script language="javascript" src="../js/stopwatch.js"></script>
+    <script language="javascript" src="../js/side_menu.js"></script>
+</body>
+
+</html>
