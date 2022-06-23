@@ -1,6 +1,7 @@
 /*reset css*/
 * {
     margin: 0px;
+    list-style: none;
 }
 
 a {

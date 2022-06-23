@@ -29,12 +29,14 @@
     width:150px;
 }
 #lap{
-    cursor:default;
+    width: 150px;
+    cursor: default;
 }
 #clear{
-    cursor:default;
+    width: 150px;
+    display: none;
 }
 #stop{
     width:150px;
-    display:none;
+    display: none;
 }

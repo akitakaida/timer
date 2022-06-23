@@ -28,21 +28,20 @@ $('#clear').click(function () {
     document.location.reload();
 });
 
-
-
 //ストップウォッチの処理部分
 $("#start").click(function () { 
     //ボタンの設定
+    $("#lap").show();
+    $("#clear").hide();
     $("#stop").show();
     $("#start").hide();
     btnONOFF('#lap', 'on');
-    btnONOFF('#clear', 'off');
 
     //stopが押されたとき
     $('#stop').click(function () {
         clearInterval(watchInterval);
-        btnONOFF('#lap', 'off');
-        btnONOFF('#clear', 'on');
+        $("#lap").hide();
+        $("#clear").show();
         $("#stop").hide();
         $("#start").show();
     });
