@@ -17,17 +17,6 @@ function changeDigits(t) {
     return time;
 }
 
-//入力欄を2桁で表示
-$('.inputTime').change(function () {
-    let time = changeDigits($(this).val());
-    $(this).val(time);
-});
-
-//CLEARボタンが押されたとき
-$('#clear').click(function () {
-    document.location.reload();
-});
-
 //ストップウォッチの処理部分
 $("#start").click(function () { 
     //ボタンの設定
@@ -53,7 +42,7 @@ $("#start").click(function () {
     
     const stopwatch = () =>{
         allsec ++;
-        min = changeDigits(Math.floor((allsec % 360000) / 6000));
+        min = changeDigits(Math.floor(allsec/ 6000));
         sec = changeDigits(Math.floor(allsec % 6000)/100);
         ms = changeDigits(Math.floor(allsec % 100));
         $("#min").text(min);
@@ -63,9 +52,32 @@ $("#start").click(function () {
     //10msごとに実行
     stopwatch(allsec);
     const watchInterval = setInterval(stopwatch, 10);
-    
-    //lapが押されたとき
-    $("#lap").click(function () {
-        $("#lapArea").append(`<li>${min}:${sec}.${ms}</li>`);
-    })
+});
+
+//lapが押されたとき
+let lapCount = 0;
+let bAllsec = 0;
+$("#lap").click(function () {
+    $("#lapArea").show();
+    let min = parseInt($("#min").text());
+    let sec = parseInt($("#sec").text());
+    let ms =  parseInt($("#ms").text());
+    let incSec = 6000 * min + 100 * sec + ms - bAllsec;
+    let lapMin = changeDigits(Math.floor(incSec / 6000));
+    let lapSec = changeDigits(Math.floor(incSec % 6000) / 100);
+    let lapMs = changeDigits(Math.floor(incSec % 100));
+    lapCount++;
+    $("#lapArea").append(
+        `<tr>
+            <td>${changeDigits(lapCount)}</td>
+            <td>${lapMin}:${lapSec}.${lapMs} </td>
+            <td>${changeDigits(min)}:${changeDigits(sec)}.${changeDigits(ms)}</td>
+        </tr>`
+    );
+    bAllsec += incSec;
+})
+
+//CLEARボタンが押されたとき
+$('#clear').click(function () {
+    document.location.reload();
 });

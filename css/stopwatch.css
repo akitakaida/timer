@@ -40,3 +40,10 @@
     width:150px;
     display: none;
 }
+#lapArea{
+    display: none;
+    width:100%;
+}
+th{
+    border-bottom:1px solid black;
+}
