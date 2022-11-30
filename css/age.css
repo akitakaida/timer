@@ -1,0 +1,12 @@
+.title {
+    border-bottom: solid 1px black;
+    text-align: left;
+    margin: 10px 0;
+    width: auto;
+}
+
+#return, #guess{
+    background-color: rgb(220, 245, 255);
+    padding: 10px;
+    margin-bottom: 50px;
+}

@@ -6,12 +6,14 @@
 
 a {
     text-decoration: none;
+    color:inherit;
 }
 
 /*すべてで使うcss*/
 header {
     height: 100px;
-    background-color: darkgray;
+    color:white;
+    background-color: navy;
     text-align: center;
 }
 
@@ -34,14 +36,12 @@ header {
     width: 80%;
     margin: 0 auto;
 }
-
 /*サイドメニュー*/
 #side_menu {
     color: white;
     background-color: rgb(46, 46, 46);
     position: absolute;
     top: 100px;
-    z-index: 0.1;
 }
 
 .side_menu_title {
@@ -65,7 +65,7 @@ header {
 }
 
 .side_menu_icon {
-    padding-left: 10px;
+    padding: 0 10px 0 10px;
 }
 
 .side_menu_name {

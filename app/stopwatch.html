@@ -5,29 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Webストップウォッチ</title>
+    <link rel = "icon" href = "../../icon/logo.png">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/stopwatch.css">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://kit.fontawesome.com/03e4df556a.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body onload="CreateSideMenu('stopwatch')">
     <!--サイドメニュー-->
-    <div id="side_menu">
-        <div class="side_menu_title">
-            <i class="fa-solid fa-bars side_menu_icon"></i>
-            <p class="side_menu_name">Menu</p>
-        </div>
-        <div class="side_menu_item" name="timer.html">
-            <i class="fa-solid fa-hourglass side_menu_icon"></i>
-            <p class="side_menu_name">タイマー</p>
-        </div>
-        <div class="side_menu_item" name="stopwatch.html" id="selected">
-            <i class="fa-solid fa-ellipsis-vertical"></i>
-            <i class="fa-solid fa-stopwatch side_menu_icon"></i>
-            <p class="side_menu_name">ストップウォッチ</p>
-        </div>
-    </div>
+    <div id="side_menu"></div>
+    <!--ヘッダー-->
     <header>
         <div class="container">
             <h1 class="header-title">ストップウォッチ</h1>

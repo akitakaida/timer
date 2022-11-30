@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>年齢計算</title>
+    <link rel = "icon" href = "../../icon/logo.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/age.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/03e4df556a.js" crossorigin="anonymous"></script>
+</head>
+
+<body onload='CreateSideMenu("age")''>
+    <!--サイドメニュー-->
+    <div id="side_menu"></div>
+    
+    <!--header-->
+    <header>
+        <div class="container">
+            <h1 class="header-title">年齢計算</h1>
+        </div>
+    </header>
+    
+    <!--入力エリア-->
+    <div class="area">
+        <div class="container">
+            <h2 class="title">
+                生年月日から年齢を計算する
+            </h2>
+            <div class="form">
+                <p>生年月日</p>
+                <select name="year21" id="year21">
+                    <option value="0">西暦</option>
+                    <option value="1">大正</option>
+                    <option value="2">昭和</option>
+                    <option value="3">平成</option>
+                    <option value="4">令和</option>
+                </select>
+                <input type="number" name="year22" id="year22">
+                <label for="year22">年</label>
+                <input type="number" name="month2" id="month2" value="1" min="1" max="12">
+                <label for="month2">月</label>
+                <input type="number" name="date2" id="date2" value="1" min="1" max="31">
+                <label for="date2">日</label>
+            </div>
+            <div class="form">
+                <p>計算する日の日付</p>
+                <input type="button" value="本日" id="today">
+                <select name="year11" id="year11">
+                    <option value="0">西暦</option>
+                    <option value="1">大正</option>
+                    <option value="2">昭和</option>
+                    <option value="3">平成</option>
+                    <option value="4">令和</option>
+                </select>
+                <input type="number" name="year12" id="year12">
+                <label for="year12">年</label>
+                <input type="number" name="month1" id="month1" value="1" min="1" max="12">
+                <label for="month1">月</label>
+                <input type="number" name="date1" id="date1" value="1" min="1" max="31">
+                <label for="date1">日</label>
+            </div>
+
+            <input type="button" value="計算" class="btn" id="cul1">
+            <h2 id="return">
+                <!--計算結果の表示領域-->
+                計算結果
+            </h2>
+        </div>
+    </div>
+    
+    <div class="area">
+        <div class="container">
+            <h2 class="title">
+                干支から生まれ年を推測する
+            </h2>
+            <div class="form">
+                <p>干支</p>
+                <select name="eto" id="eto">
+                    <option value="0">ねずみ（子）</option>
+                    <option value="1">うし（丑）</option>
+                    <option value="2">とら（寅）</option>
+                    <option value="3">うさぎ（卯）</option>
+                    <option value="4">たつ（辰）</option>
+                    <option value="5">へび（巳）</option>
+                    <option value="6">うま（午）</option>
+                    <option value="7">ひつじ（未）</option>
+                    <option value="8">さる（申）</option>
+                    <option value="9">とり（酉）</option>
+                    <option value="10">いぬ（戌）</option>
+                    <option value="11">いのしし（亥）</option>
+                </select>
+                <label for="eto">年</label>
+                <p>※今年の誕生日を過ぎているものとして計算します</p>
+                <input type="button" value="実行" class="btn" id="cul2">
+                <div id="guess">
+                    <!--計算結果の表示領域-->
+                    <h2>結果</h2>
+                </div>
+    
+            </div>
+        </div>
+    </div>
+    <footer>
+        
+    </footer>
+    <!--Java scriptファイルの読み込み-->
+    <script language="javascript" src="../js/age.js"></script>
+    <script language="javascript" src="../js/side_menu.js"></script>
+</body>
+
+</html>
